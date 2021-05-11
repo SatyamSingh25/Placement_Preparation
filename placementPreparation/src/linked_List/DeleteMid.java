@@ -4,6 +4,15 @@ package linked_List;
  */
 public class DeleteMid {
 	
+	class Node{
+		int data;
+		Node next;
+		public Node(int d) {
+			data = d;
+			next = null;
+		}
+	}
+	
 	Node deleteMid(Node head) {
         Node slowPtr = head;
         Node fastPtr = head;
