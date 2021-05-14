@@ -2,7 +2,7 @@ package linked_List;
 
 /*problem link : https://practice.geeksforgeeks.org/problems/find-length-of-loop/1/?track=amazon-linkedlists&batchId=192#
  * Difficulty : Easy
- * time complexity : O(1)
+ * time complexity : O(n)
  * Auxiliary space : O(1)
  */
 
