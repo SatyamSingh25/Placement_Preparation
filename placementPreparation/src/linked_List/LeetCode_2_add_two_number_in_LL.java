@@ -1,6 +1,6 @@
 package linked_List;
 /*problem link : https://leetcode.com/problems/add-two-numbers/
- * Difficulty : Easy
+ * Difficulty : Medium
  * 
  * TC = O(max(l1.size ,l2.size))
  * Auxiliary  space = O(l1.size + l2.size)
