@@ -5,7 +5,7 @@ package binary_Tree;
 public class inPlace_Convert_BinaryTree_to_its_SumTree {
 
 	public int convertB_TreeToSumTree(Node root) {
-		if(root.data == 0) {
+		if(root == null) {
 			return 0;
 		}
 		
