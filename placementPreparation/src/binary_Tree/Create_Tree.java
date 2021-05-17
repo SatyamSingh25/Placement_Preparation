@@ -36,10 +36,10 @@ public class Create_Tree {
 		}
 		
 		root = new Node(data);
-		System.out.println("enter data of left Node : ");
+		System.out.println("enter left for " + data);
 		root.left = createTree();
 		
-		System.out.println("Enter data of right Node : ");
+		System.out.println("Enter right for " + data);
 		root.right = createTree();
 		
 		return root;
