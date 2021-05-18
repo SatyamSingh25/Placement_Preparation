@@ -1,5 +1,7 @@
 package binary_Tree;
-
+/*
+ * Difficulty : easy
+ */
 import java.util.*;
 
 public class All_Paths_from_Root_to_leaf {
