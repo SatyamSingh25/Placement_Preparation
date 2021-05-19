@@ -6,14 +6,14 @@ public class Middle_Of_LinkedList {
 	
 //	public static Node head;
 	
-//	class Node{
-//		int data;
-//		Node next;
-//		Node(int d){
-//			data = d;
-//			next=null;
-//		}
-//	}
+	class Node{
+		int data;
+		Node next;
+		Node(int d){
+			data = d;
+			next=null;
+		}
+	}
 	//finding the middle in this function
 	public static void getMiddle(Node head)
     {
