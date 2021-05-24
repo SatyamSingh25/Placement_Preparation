@@ -57,7 +57,9 @@ public class All_Nodes_Distance_K_in_Binary_Tree {
         return result;
     }
     public static void findingParents(HashMap<Node, Node> parentList, Node root){
-        if(root == null) return;
+        if(root == null) 
+        	return;
+        
         if(root.left != null)
             parentList.put(root.left, root);
         
