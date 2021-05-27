@@ -25,11 +25,11 @@ public class BinaryTree_Level_Order_Traversal_II {
 	 * Definition for a binary tree node.
 	 * public class Node {
 	 *     int data;
-	 *     TreeNode left;
-	 *     TreeNode right;
-	 *     TreeNode() {}
-	 *     TreeNode(int data) { this.data = data; }
-	 *     TreeNode(int data, TreeNode left, TreeNode right) {
+	 *     Node left;
+	 *     Node right;
+	 *     Node() {}
+	 *     Node(int data) { this.data = data; }
+	 *     Node(int data, Node left, Node right) {
 	 *         this.data = data;
 	 *         this.left = left;
 	 *         this.right = right;
