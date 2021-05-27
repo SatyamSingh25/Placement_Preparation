@@ -1,7 +1,7 @@
 package binary_Tree;
 import java.util.*;
 /**
- * @author Satyam
+ * @author Satyam Singh
  *                               LEETCODE 894
  * Problem link : https://leetcode.com/problems/all-possible-full-binary-trees/
  * 
@@ -38,10 +38,12 @@ public class All_Possible_Full_Binary_Trees {
         ArrayList<Node> ans = new ArrayList<>();
         if(n%2 == 0)
             return ans;
+        
         if(n==1){
             ans.add(new Node(0));
             return ans;
         }        
+        
         for(int i=1; i<n; i++){
             for(Node left: allPossibleFBT(i)){
                 for(Node right: allPossibleFBT(n-i-1)){
