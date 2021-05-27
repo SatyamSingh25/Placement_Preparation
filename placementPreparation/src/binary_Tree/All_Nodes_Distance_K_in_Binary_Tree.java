@@ -12,7 +12,7 @@ import java.util.*;
  */
 public class All_Nodes_Distance_K_in_Binary_Tree {
 	
-	//approach
+	//approach using BFS
     public List<Integer> distanceK(Node root, Node target, int k) {
         ArrayList<Integer> result = new ArrayList<Integer>();
         
