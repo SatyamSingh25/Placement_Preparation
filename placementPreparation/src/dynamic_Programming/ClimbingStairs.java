@@ -5,7 +5,7 @@ package dynamic_Programming;
  * Difficulty : Easy
  */
 public class ClimbingStairs {
-	public int climbStairs(int n) {
+	public static int climbStairs(int n) {
 		if(n==0 || n==1){
 			return 1;
 		}
