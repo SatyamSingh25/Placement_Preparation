@@ -1,5 +1,7 @@
 package array;
 import java.util.*;
+//--------------------------MEETING ROOMS-----------------------------------
+//------------------------Minimum Platforms---------------------------------   
 public class MeetingRooms {
 	public static int meeting(int[][] arr) {
 		Arrays.sort(arr, (a,b)->Integer.compare(a[0], b[0]));
