@@ -1,5 +1,5 @@
 package dynamic_Programming;
-/**
+/** Counting palindromic substring
  * @Contributed_By Satyam Singh
  * ------------------------------------LEETCODE 647------------------------------------
  * Problem link : https://leetcode.com/problems/palindromic-substrings/
