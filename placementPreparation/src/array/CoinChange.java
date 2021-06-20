@@ -6,7 +6,7 @@ import java.util.*;
  * Difficulty : Medium
  */
 public class CoinChange {
-	//dynamic programming
+	//dynamic programming approach
 	public static int coinChange(int[] coins, int amount) {
 		int[] dp = new int[amount+1];
 		Arrays.fill(dp, amount+1);
