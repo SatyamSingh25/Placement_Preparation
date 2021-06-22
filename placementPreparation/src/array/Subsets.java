@@ -1,9 +1,8 @@
 package array;
 import java.util.*;
 /**
- * Counting all sunsets of an array
- * @author Satyam
- *
+ * Counting/Printing all sunsets of an array
+ * @Contributor Satyam Singh
  */
 public class Subsets {
 	public static List<List<Integer>> subset(int[] nums) {
