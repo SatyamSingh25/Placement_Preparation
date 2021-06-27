@@ -2,7 +2,7 @@ package sorting;
 import java.util.*;
 /**
  * @author Satyam Singh
- * Time complexcity : Best case              Worst case
+ * Time complexity : Best case              Worst case
  *                    O(nlog*n)              O(nlog*n)
  * Space : O(n)
  * @Stable
