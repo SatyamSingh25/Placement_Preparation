@@ -1,6 +1,6 @@
 package oops;
 //its mandatory to override all method in SubClass.
-//all method under interface by default public + abstract if youn do not this in declaring the method.
+//all method under interface by default public + abstract if you do not this in declaring the method.
 interface motorCycle{
 	void run();
 	int run1();
