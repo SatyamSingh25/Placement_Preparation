@@ -23,7 +23,8 @@ public class Trie {
 		for(char ch: word.toCharArray()) {
 			if(curr.child[ch-'a'] == null) {
 				curr.child[ch-'a'] = new Node();
-			}
+			}	
+			curr = curr.child[ch-'a'];
 		}
 		curr.isEnd = true;
 	}
