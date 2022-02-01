@@ -1,4 +1,7 @@
 package dynamic_Programming;
+
+import java.util.Arrays;
+
 /**
  * @Contributer-Satyam Singh
  * ----------------------------------------------LEETCODE 300--------------------------------------------------
@@ -31,5 +34,9 @@ public class Longest_Inceasing_Subsequence {
 			finalMax = Math.max(finalMax, dp[i]);
 		}
 		return finalMax;
+	}
+	public static void main(String[] args) {
+		int[] arr = new int[] {10,9,2,5,3,7,101,18};
+		System.out.println(LIS(arr));
 	}
 }
