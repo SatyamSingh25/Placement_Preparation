@@ -8,6 +8,7 @@ package array;
  */
 import java.util.Arrays;
 public class SortedMergeInOneArray {
+	//Method
 	public static int[] mergeSortInOneArray(int[] arr1, int[] arr2, int n,int m) {
 		int i = n-1;
 		int j = m-1;
@@ -24,6 +25,7 @@ public class SortedMergeInOneArray {
 		}
 		return arr1;
 	}
+	//Driver Code
 	public static void main(String[] args) {
 		int[] arr1 = new int[] {10, 12, 13, 14, 18, 0, 0, 0, 0, 0};
 		int[] arr2 = new int[] {16, 17, 19, 20, 22};
