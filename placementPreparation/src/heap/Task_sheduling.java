@@ -14,7 +14,7 @@ package heap;
    Output: 8
    explain: A -> B -> idle -> A -> B -> idle -> A -> B
    
-   Difficuty: Medium
+   Difficulty: Medium
    
    Tag: Max Heap, Queue
  */
