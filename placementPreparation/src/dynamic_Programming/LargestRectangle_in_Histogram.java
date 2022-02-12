@@ -16,7 +16,9 @@ package dynamic_Programming;
       
     Input: heights = [2,1,5,6,2,3]
     Output: 10
- *
+ *	
+ *  Difficulty: Hard
+ *  tag: DP, Stack, Left smaller array, Right Smaller array
  */
 import java.util.*;
 public class LargestRectangle_in_Histogram {
