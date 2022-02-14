@@ -41,7 +41,7 @@ public class MinimumDeletionToPalindrome {
 	}
 	
 	//Dynamic Approach [LCS variation problem] O(n^2) time and space
-	public static int Min_Deletion_to_Palindrome(String str) {
+	public static int Min_Deletion_to_Palindrome_DP(String str) {
 		int size = str.length();
 		
 		String reverse = new StringBuilder(str).reverse().toString();
@@ -67,10 +67,11 @@ public class MinimumDeletionToPalindrome {
 	//Driver Code
 	public static void main(String[] args) {
 		String str = "ACBCDBAA";
-		System.out.println("String: " + str);
+		System.out.println("String: " + str);//                        start    end
 		System.out.println("Recursion: " + MinDelPalindromeRecursion(str, 0, str.length()-1));
+		//                                                                        start   end             unique key
 		System.out.println("Recursion + memo :" + MinDelPalindromeMemorisation(str, 0, str.length()-1, new HashMap<String, Integer>()));
-		System.out.println("DP approach: " + Min_Deletion_to_Palindrome(str));
+		System.out.println("DP approach: " + Min_Deletion_to_Palindrome_DP(str));
 		
 	}
 
