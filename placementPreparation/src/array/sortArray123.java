@@ -22,10 +22,10 @@ public class sortArray123 {
 				m++;
 				i++;
 			}
-			if(arr[m] == 2) {
+			else if(arr[m] == 2) {
 				m++;
 			}
-			if(arr[m] == 3) {
+			else if(arr[m] == 3) {
 				swap(arr, j, m);
 				j--;
 			}
@@ -41,7 +41,9 @@ public class sortArray123 {
 	//driver code
 	public static void main(String[] args) {
 		int[] arr = new int[] {3,1,3,2,1,1,3,2,1,3,2,2,1,1,2,3,1};
+		int[] arr2 = {3,3,3,3,3,2,2,2,1,1,1,1};
 		System.out.println(Arrays.toString(sort123(arr)));
+		System.out.println(Arrays.toString(sort123(arr2)));
 		
 	}
 
