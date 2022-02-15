@@ -31,7 +31,7 @@ public class Two_missing_number {
 	    System.out.print(totalSmallerHalf - sumSmallerHalf + " ");
 
 	    System.out.println(((n * (n + 1)) / 2 - totalSmallerHalf) - sumGreaterHalf);
-				
+	    
 	}
 
 	public static void main(String[] args) {
