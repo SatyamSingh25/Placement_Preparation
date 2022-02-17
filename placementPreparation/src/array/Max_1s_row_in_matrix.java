@@ -12,6 +12,7 @@ package array;
    Output: 2nd row have max 1s 
  */
 public class Max_1s_row_in_matrix {
+	
 	//Method O(n+m) time O(1) time
 	public static int findMax_1s_row_matrix(int[][] arr) {
 		int row = 0;
@@ -29,6 +30,7 @@ public class Max_1s_row_in_matrix {
 		}
 		
 		return row;
+		
 	}
 	//method O(n^2)
 	/* -->Iterate all rows anf find each row 1 count and return row which has max 1 in it
