@@ -11,8 +11,8 @@ public class ShortestPath_Binary_mat_BFS {
 	//main method
 	public static void main(String[] args) {
 		int[][] grid = new int[][] {{0,0,0},
-									{1,1,0},
-									{1,1,0}};
+			{1,1,0},
+			{1,1,0}};
 		//result -> 4
 		System.out.println(shortestPathBinaryMatrix(grid));
 		
