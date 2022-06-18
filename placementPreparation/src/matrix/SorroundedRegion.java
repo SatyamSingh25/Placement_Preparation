@@ -64,7 +64,10 @@ public class SorroundedRegion {
 
 	//Driver code
 	public static void main(String[] args) {
-		char[][] mat = new char[][] {{'X','X','X','X'},{'X','O','O','X'},{'X','X','O','X'},{'X','O','X','X'}};
+		char[][] mat = new char[][] {{'X','X','X','X'},
+									{'X','O','O','X'},
+									{'X','X','O','X'},
+									{'X','O','X','X'}};
 		//method calling
 		sorroundedRegion(mat);
 		for(int i=0; i<mat.length; i++)
