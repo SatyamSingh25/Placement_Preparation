@@ -30,8 +30,6 @@ public class Far_from_Land_as_Possible {
                 }
             }
         }
-
-        
         
         //Direction
         int[] drow = new int[]{1, 0, -1, 0};
