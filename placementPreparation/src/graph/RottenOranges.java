@@ -1,5 +1,8 @@
 package graph;
 // https://practice.geeksforgeeks.org/problems/rotten-oranges2536/1/?track=amazon-graphs&batchId=192
+/**
+ * @BFS_on_matrix
+ */
 import java.util.*;
 public class RottenOranges {
 	static class Pair{
