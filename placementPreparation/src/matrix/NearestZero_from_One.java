@@ -1,4 +1,4 @@
-package graph.DFS_BFS;
+package matrix;
 import java.util.*;
 public class NearestZero_from_One {
     //Main Method
