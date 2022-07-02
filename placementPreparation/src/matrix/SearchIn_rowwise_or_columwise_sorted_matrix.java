@@ -6,6 +6,7 @@ package matrix;
  */
 public class SearchIn_rowwise_or_columwise_sorted_matrix {
 	
+	//O(row + column)
 	public static boolean search(int[][] mat, int target) {
 		int row = mat.length;
 		int col = mat[0].length;
