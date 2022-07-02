@@ -36,6 +36,12 @@ public class MaxArea_Rectangle_in_0_1_matrix {
 		for(int i=0; i<row; i++) {
 			System.out.println(Arrays.toString(arr[i]));
 		}
+		/*
+		 * [0, 1, 1, 0]
+			[1, 2, 2, 1]
+			[2, 3, 3, 2]
+			[3, 4, 0, 0]
+		 */
 		
 		//calling largest rectangle histogram for every row and getting maxArea for row
 		int maxArea = 0;
