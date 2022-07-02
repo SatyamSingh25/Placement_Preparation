@@ -62,8 +62,7 @@ public class ShortestPath_to_All_Nodes {
         }
         return -1;
     }
-	
-	//main method
+	//Main method
 	public static void main(String[] args) {
 		int[][] graph = new int[][] {{1,2,3},{0},{0},{0}};
 		//result -> 4
