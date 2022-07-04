@@ -29,6 +29,7 @@ public class Longest_String_chain {
 	public static int longestStringChain(String[] words) {
 		//sorting array according to size of words
 		Arrays.sort(words, (a, b)->a.length()-b.length());
+		System.out.println(Arrays.toString(words));
 		
 		int maxSize = 1;
 		HashMap<String, Integer> map = new HashMap<>();
@@ -47,6 +48,8 @@ public class Longest_String_chain {
 			
 			maxSize = Math.max(maxSize, map.get(word));
 		}
+		
+		System.out.println(map);
 		return maxSize;
 	}
 
