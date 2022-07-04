@@ -1,5 +1,18 @@
 package binary_Tree;
-
+/**
+ * @Bianry_Tree
+ * @Bottom_UP_approach
+ * @0_not_covered_by_camera  //Only this case increase the Camera count
+ * @1_Covered_By_Camera
+ * @2_Has_a_Camera
+ */
+/*
+ * ---------------------------------------968. Binary Tree Cameras-------------------------------------------
+ * You are given the root of a binary tree. We install cameras on the tree nodes where each camera at a node 
+ * can monitor its parent, itself, and its immediate children.
+ * 
+ * Return the minimum number of cameras needed to monitor all nodes of the tree.
+ */
 import java.util.HashSet;
 import java.util.Set;
 
