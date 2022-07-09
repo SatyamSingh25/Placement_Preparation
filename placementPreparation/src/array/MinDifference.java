@@ -8,12 +8,15 @@ public class MinDifference {
 		if(arr1.size() == 0 || arr2.size() == 0) {
 		    return -1;
 	    }
+		
 	    int minDiff = Integer.MAX_VALUE;
 	    int i = 0, j =0;
+	    
 	    while(i < arr1.size() && j < arr2.size()) {
-		    int diff = Math.abs(arr1.get(i) - arr2.get(j));
+		    int diff = Math.abs(arr1.get(i) - arr2.get(j)); //absolute difference
 		    if(diff == 0) 
 		    	return 0;
+		    
 	        minDiff = (diff < minDiff)?diff : minDiff;
 	        if(arr1.get(i) < arr2.get(j)) {
 	            i++;
@@ -21,16 +24,21 @@ public class MinDifference {
 	            j++;
 	        }
 	    }
+	    
+	    //means J has been reached to End in array 2 and I not
 	    while(i < arr1.size()) {
 	    	int end = arr2.size() - 1;
 	        int diff = Math.abs(arr1.get(i++) - arr2.get(end));
-	        minDiff = (diff < minDiff)?diff : minDiff;
+	        minDiff = (diff < minDiff) ? diff : minDiff;
 	    }
+	    
+	    //means I has been reached to End in array 2 and J not
 	    while(j < arr2.size()) {
 	    	int end = arr1.size()- 1;
 	    	int diff = Math.abs(arr1.get(end) - arr2.get(j++));
-	    	minDiff = (diff < minDiff)?diff : minDiff;
+	    	minDiff = (diff < minDiff) ? diff : minDiff;
 	    }
+	    
 	    if(minDiff == Integer.MAX_VALUE) {
         	return -1;
         }
