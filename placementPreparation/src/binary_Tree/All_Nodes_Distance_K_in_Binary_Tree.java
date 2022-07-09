@@ -34,23 +34,28 @@ public class All_Nodes_Distance_K_in_Binary_Tree {
                 Node temp = queue.poll();
                 visited.add(temp);
             
+                //at this stage all Node which are at K distance from target Node is in the Queue
+                //So, Add These curr Queue Nodes into the result array
                 if(k==0){
                     result.add(temp.data);
                 }
-            
+                
+                //current temp has a Parent && curr temp Parent is Not Visited yet
                 if(parentList.containsKey(temp) && !visited.contains(parentList.get(temp))){
                     queue.add(parentList.get(temp));
                 }
-            
+                
+                //adding current Node left child if its not visited yet
                 if(temp.left != null && !visited.contains(temp.left)){
                     queue.add(temp.left);
                 }
             
+                //ading current Node Right Child if its not visited yet
                 if(temp.right != null && !visited.contains(temp.right)){
                     queue.add(temp.right);
                 }
             }
-            k--;            
+            k--;    //decrementing the count of steps        
             if(k<0)
                 break;
         }
