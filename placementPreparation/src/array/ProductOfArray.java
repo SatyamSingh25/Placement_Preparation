@@ -19,6 +19,7 @@ public class ProductOfArray {
 			prod[i] *= temp;
 			temp *= arr[i];
 		}
+		System.out.println(Arrays.toString(prod));
 		temp = 1;
 		for(int i=n-1; i>=0; i--) {
 			prod[i] *= temp;
@@ -29,7 +30,9 @@ public class ProductOfArray {
 	
 	//Driver Code
 	public static void main(String[] args) {
-		int[] arr = new int[] { 10, 3, 5, 6, 2 };
+//		int[] arr = new int[] { 10, 3, 5, 6, 2 };
+		int[] arr = new int[] { 2,3,4,5 };
+		System.out.println(Arrays.toString(arr));
 		System.out.println(Arrays.toString(findProductExecptItself(arr)));
 	}
 
