@@ -19,6 +19,7 @@ public class All_Nodes_Distance_K_in_Binary_Tree {
         if(root == null){
             return result;
         }
+        //    child   parent
         HashMap<Node, Node> parentList = new HashMap<>();
         findingParents(parentList, root);
         
