@@ -1,5 +1,7 @@
 package array;
 
+import java.util.Arrays;
+
 public class SortArrayWithoutSorting {
 
 	public static void main(String[] args) {
@@ -14,8 +16,8 @@ public class SortArrayWithoutSorting {
 				}
 			}
 		}
-		for(int i: arr)
-			System.out.print(i+ " ");
+
+		System.out.println(Arrays.toString(arr));
 	}
 
 }
