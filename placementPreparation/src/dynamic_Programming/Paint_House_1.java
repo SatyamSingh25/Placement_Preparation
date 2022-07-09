@@ -7,7 +7,7 @@ package dynamic_Programming;
  */
 import java.util.Arrays;
 public class Paint_House_1 {
-	
+	//time: O(n)  Space: O(3n)
 	public static int minCost_To_Paint_N_Rooms_with_3_Colors(int[][] colorsCost) {
 		int rooms = colorsCost.length;
 		
