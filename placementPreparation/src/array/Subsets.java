@@ -1,7 +1,7 @@
 package array;
 import java.util.*;
 /**
- * Counting/Printing all sunsets of an array
+ * Counting/Printing all subsets of an array
  * @Contributor Satyam Singh
  */
 public class Subsets {
