@@ -5,6 +5,7 @@ import java.util.Arrays;
 /**
  * @Paint_Fence_Algorithm
  * @Paint_Walls_with_K_colors_where_NOT_More_than_two_consecutive_walls_are_same_Color
+ * @Number_of_Ways
  * @Recusion -> Exponential
  * @Memorization -> O(n) & O(n)+O(n)auxiliary
  * @DP -> O(n) & O(n)
