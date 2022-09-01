@@ -1,6 +1,7 @@
 package binary_Tree;
 import java.util.*;
 public class TreeFrom_Inorder_and_PreOrder {
+	
 	static HashMap<Integer, Integer> indexes;
 	public static Node BuildTree_From_Inorder_and_Preorder(int[] preorder, int[] inorder) {
 		indexes = new HashMap<>();
