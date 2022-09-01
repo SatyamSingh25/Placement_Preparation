@@ -1,9 +1,9 @@
 package string;
 /**
  * @CountNumber_of_Palindrome_substring_are_possible
+ * @Substring
  * @DP
  * @2D_DP
- *
  */
 public class CountAll_Palindromic_Substring {
 	
