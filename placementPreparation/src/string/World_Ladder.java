@@ -21,7 +21,7 @@ public class World_Ladder {
 			while(size-- != 0) {
 				String curr = queue.poll();
 				if(curr.equals(endWord))
-					return count+1;
+					return count+1; //beacuse this level count is not added that my +1 is used
 				
 				//changing word
 				System.out.println("current word: " + curr);
