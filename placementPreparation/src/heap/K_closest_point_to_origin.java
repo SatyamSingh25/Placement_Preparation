@@ -40,7 +40,8 @@ public class K_closest_point_to_origin {
         	if(queue.size() > k) {
         		queue.poll();
         	}	
-        }    
+        }  
+        
         //maintaining result matrix here
         int[][] res = new int[k][2];
         for(int i=0; i<k; i++) {
