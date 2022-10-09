@@ -31,7 +31,7 @@ public class DivideArray_Into_K_equal_Parts {
 				vis[start] = true;
 				if(solve(arr, start+1, target, currSum + arr[start], k, vis))
 					return true;
-				vis[start] = false;
+				vis[start] = false; 
 			}
 		}
 		return false;
