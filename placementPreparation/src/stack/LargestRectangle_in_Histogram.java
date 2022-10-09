@@ -33,7 +33,7 @@ public class LargestRectangle_in_Histogram {
         int[] leftSmaller = new int[n];
         int[] rightSmaller = new int[n];
         
-        //filling left smallers array
+        //filling next left smallers array then arr[i]
         for(int i=0; i<n; i++){
             while(stack.isEmpty() == false && heights[stack.peek()] >= heights[i]){
                 stack.pop();
@@ -48,7 +48,7 @@ public class LargestRectangle_in_Histogram {
             stack.push(i);
         }
         
-        //filling right smaller array
+        //filling next right smaller array then arr[i]
         stack.clear();
         for(int i=n-1; i>=0; i--){
             while(stack.isEmpty() == false && heights[stack.peek()] >= heights[i]){
@@ -63,10 +63,12 @@ public class LargestRectangle_in_Histogram {
             
             stack.push(i);
         }
+        
         //calculating the max rectable area
         for(int i=0; i<n; i++){
             maxArea = Math.max(maxArea, (heights[i] * (rightSmaller[i]-leftSmaller[i]+1)));
         }
+        
         //result
         return maxArea;
     }
