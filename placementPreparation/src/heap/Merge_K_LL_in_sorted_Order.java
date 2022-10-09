@@ -33,6 +33,46 @@ public class Merge_K_LL_in_sorted_Order {
 		}
 	}
 	
+	//Optimal Approach
+	public ListNode mergeKLists2(ListNode[] lists) {
+        if(lists.length == 0)
+            return null;
+
+        return mergeKListsHelper(lists, 0, lists.length-1);
+    }
+    public ListNode mergeKListsHelper(ListNode[] lists, int start, int end){
+        if(start == end)
+            return lists[start];
+
+        int mid = start + (end - start)/2;
+        ListNode l1 = mergeKListsHelper(lists, start, mid);
+        ListNode l2 = mergeKListsHelper(lists, mid+1, end);
+
+        return mergeTwoList(l1, l2);
+    }
+    public ListNode mergeTwoList(ListNode l1, ListNode l2){
+        if(l1 == null || l2 == null)
+            return l1 == null? l2 : l1;
+
+        ListNode newList = new ListNode(0);
+        ListNode temp = newList;
+
+        while(l1 != null && l2 != null){
+            if(l1.val < l2.val){
+                temp.next = l1;
+                l1 = l1.next;
+            }
+            else{
+                temp.next = l2;
+                l2 = l2.next;
+            }
+            temp = temp.next;
+        }
+
+        temp.next = l1 == null ? l2 : l1;
+        return newList.next;
+    }
+	
 	//main method
     public ListNode mergeKLists(ListNode[] lists) {
         List<Integer> arr = new ArrayList<Integer>();
