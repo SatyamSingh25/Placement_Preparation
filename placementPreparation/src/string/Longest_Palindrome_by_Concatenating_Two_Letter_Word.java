@@ -14,8 +14,8 @@ package string;
 	return 0.
 
 	A palindrome is a string that reads the same forward and backward.
- * 
  */
+
 import java.util.*;
 public class Longest_Palindrome_by_Concatenating_Two_Letter_Word {
 	//time: O(word) + O(26)
