@@ -3,8 +3,7 @@ import java.util.*;
 /**
  * @Where_will_ball_fall
  * @if_arr[i][j] == 1 then fall right
- * @if_arr[i][j] == -1  then fall left
- * 
+ * @if_arr[i][j] == -1  then fall left 
  * @return array i-th ball fall from which column 
  */
 /*----------------------------------1706. Where Will the Ball Fall----------------------------------
