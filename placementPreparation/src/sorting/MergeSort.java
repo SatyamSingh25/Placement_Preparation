@@ -75,6 +75,8 @@ public class MergeSort {
         
         mergeSort(arr, 0, n-1);
 
+        int count = 0;
+        System.out.println(Integer.toString(count).getClass());
         System.out.println("Sorted array");
         printArray(arr);
     }
