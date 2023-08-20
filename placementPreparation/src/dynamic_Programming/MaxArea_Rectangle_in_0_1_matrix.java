@@ -83,6 +83,8 @@ public class MaxArea_Rectangle_in_0_1_matrix {
             
             stack.push(i);
         }
+//        System.out.println(Arrays.toString(leftSmaller));
+//        System.out.println(Arrays.toString(rightSmaller));
         
         for(int i=0; i<n; i++){
             maxArea = Math.max(maxArea, (heights[i] * (rightSmaller[i]-leftSmaller[i]+1)));
@@ -96,7 +98,7 @@ public class MaxArea_Rectangle_in_0_1_matrix {
 	         						{1, 1, 1, 1},
 	         						{1, 1, 1, 1},
 	         						{1, 1, 0, 0}};
-		System.out.println(maxArea_rectangle_in_matrix(arr));
+		System.out.println(maxArea_rectangle_in_matrix(arr)); // 8
 	}
 
 }
