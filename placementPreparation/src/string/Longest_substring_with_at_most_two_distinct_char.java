@@ -13,6 +13,7 @@ package string;
 import java.util.*;
 public class Longest_substring_with_at_most_two_distinct_char {
 	
+	//Approach 1
 	public static int lengthOfLongestSubstringTwoDistinct(String str) {
 		
 		if(str.length() == 0 || str.length() == 1) return str.length();
@@ -43,11 +44,41 @@ public class Longest_substring_with_at_most_two_distinct_char {
 		return maxSizeSubstring;
 	}
 
+	//Apprach 2 if string comming as stream
+	//cannot maintain first pointer so we have get last occurrence
+	public static int lengthOfLongestSubstringTwoDistinct_stream(String str) {
+		int n = str.length();
+		int start = 0;
+		int max = 0;
+		
+		//sequencial hashmap
+		LinkedHashMap<Character, Integer> lastOccur = new LinkedHashMap<>();
+		
+		for(int i=0; i<n; i++) {
+			char currentChar = str.charAt(i);
+			if(lastOccur.containsKey(currentChar)) {
+				lastOccur.remove(currentChar);
+			}
+			
+			lastOccur.put(currentChar, i);
+			
+			if(lastOccur.size() > 2) {
+				char key = lastOccur.keySet().iterator().next(); //first 
+				start = lastOccur.get(key) + 1;
+				lastOccur.remove(key);
+			}
+			max = Math.max(max, i - start + 1);
+		}
+		return max;
+	}
+	
+	
 	public static void main(String[] args) {
 		String str = "ccaabbb";
 		//aabbb
 		//5
 		System.out.println(lengthOfLongestSubstringTwoDistinct(str));
+		System.out.println(lengthOfLongestSubstringTwoDistinct_stream(str));
 	}
 
 }
