@@ -12,6 +12,7 @@ public class LRUcache {
         tail.prev = head;
     }
     
+    //getting object and changing it priority 
     public int get(int key) {
         if(map.containsKey(key)){
             Node node = map.get(key);
@@ -23,6 +24,8 @@ public class LRUcache {
         return -1;                
     }
     
+    //adding a Node into cache 
+    //if cache size fullfiled then remove least and the new one at first place in DLL
     public void put(int key, int value) {
         if(map.containsKey(key)){
             remove(map.get(key));
@@ -33,6 +36,7 @@ public class LRUcache {
         insert(new Node(key, value)); //insert after the head of DLL
     }
 
+    //Removing node from DLL
     public void remove(Node node){
         map.remove(node.key);
         node.prev.next = node.next;
