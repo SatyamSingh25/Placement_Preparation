@@ -85,14 +85,14 @@ public class DesignLeaderboard {
 		obj.addScore(3, 30);
 		obj.addScore(4, 20);
 		obj.addScore(5, 10);
-		System.out.println("sorted: " + obj.sorted);
-		System.out.println("map: " + obj.map);
-		System.out.println("top 3 sum: " + obj.top(3));
+		System.out.println("sorted: " + obj.sorted); //{30=2, 20=2, 10=1}
+		System.out.println("map: " + obj.map); //{1=30, 2=20, 3=30, 4=20, 5=10}
+		System.out.println("top 3 sum: " + obj.top(3)); //80
 		
 		obj.reset(1);
 		System.out.println("After reset 1");
-		System.out.println("sorted: " + obj.sorted);
-		System.out.println("map: " + obj.map);
+		System.out.println("sorted: " + obj.sorted); //{30=1, 20=2, 10=1}
+		System.out.println("map: " + obj.map); //{2=20, 3=30, 4=20, 5=10}
 		
 	}
 
