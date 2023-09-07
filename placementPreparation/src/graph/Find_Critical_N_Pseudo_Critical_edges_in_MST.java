@@ -9,6 +9,8 @@ package graph;
 /*
  * 1489. Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree(MST)
  * 
+ * YT: https://www.youtube.com/watch?v=zl-rLRPpl_s&t=1300s&ab_channel=CodingBeast
+ * 
  * -->find the critical and pseudo critical edges in MST of graph
  * 
  * critial edges = those edges in MST, when we not that edge while creating MST
