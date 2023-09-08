@@ -65,6 +65,9 @@ public class Rat_in_Maze {
 		
 		//all possible paths from (0,0) to (n-1, m-1)
 		System.out.println(allPathsforRats(mat));
+		mat = new int[][] {{1, 0},
+							{1, 0}};
+        System.out.println(allPathsforRats(mat));
 	}
 
 }
