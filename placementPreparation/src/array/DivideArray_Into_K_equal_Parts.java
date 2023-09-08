@@ -1,6 +1,7 @@
 package array;
 /**
  * @author Satyam
+ * @Partition_to_K_Equal_Sum_Subsets
  * @Recursion
  * @Divide_array_Into_K_Equals_Subsets
  * @Add_or_not_to_add
