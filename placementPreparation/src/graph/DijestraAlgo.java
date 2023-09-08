@@ -10,7 +10,7 @@ public class DijestraAlgo {
 		int dist[] = new int[vertices];
 		PriorityQueue<Pair> queue = new PriorityQueue<Pair>(vertices, new Pair());
 		
-		Arrays.fill(dist, Integer.MAX_VALUE);
+		Arrays.fill(dist, Integer.MAX_VALUE); //setting all dist as Infinite because we haven't get anyone them till now
 		
 		dist[source] = 0;
 		queue.add(new Pair(source, 0));
@@ -57,14 +57,61 @@ public class DijestraAlgo {
 		DijkstraAlgo(sc.nextInt(), vertices, graph);
 		sc.close();
 	}
+	
+	public double maxProbability(int n, int[][] edges, double[] succProb, int start, int end) {
+        ArrayList<ArrayList<Pair2>> graph = new ArrayList<>();
+        for(int i=0; i<n; i++)
+            graph.add(new ArrayList<>());
+
+        for(int i=0; i<n; i++){
+            ArrayList<Integer> innerList = new ArrayList<>();
+            innerList.add(null);
+            graph.get(edges[i][0]).add(new Pair2(edges[i][1], succProb[i]));
+            graph.get(edges[i][1]).add(new Pair2(edges[i][0], succProb[i]));
+        }
+
+        //min according to weight
+        PriorityQueue<Pair2> pq = new PriorityQueue<>((a,b)->Double.compare(a.weight, b.weight)); 
+        pq.add(new Pair2(start,1.0)); //1.0 is because we multiplying not adding prev value
+
+        double[] maxProb = new double[n];
+        Arrays.fill(maxProb, Integer.MAX_VALUE);
+        maxProb[start] = 0;
+
+        while(pq.isEmpty()==false){
+            Pair2 currNode = pq.poll();
+            if(currNode.node == end)
+                return currNode.weight;
+            
+            for(Pair2 itr: graph.get(currNode.node)){
+                if((itr.weight *currNode.weight) < maxProb[itr.node]){
+                    maxProb[itr.node] = (itr.node * currNode.weight);
+                    pq.add(new Pair2(itr.node, maxProb[itr.node]));
+                }
+            }
+        }
+        return maxProb[end];
+    }
+	class Pair2 {
+        double weight;
+        int node;
+        Pair2(){
+            this.weight = 0.0;
+            this.node = 0;
+        }
+        Pair2(int node, double weight){
+            this.node = node;
+            this.weight = weight;
+        }
+    }
 	static class Pair implements Comparator<Pair>
 	{
 	    int node;
 	    int weight;
 	    
-	    Pair(int v, int w) { 
+	    Pair(int v, int succProb) { 
 	    	node = v; 
-	    	weight = w;
+	    	weight = succProb;
 	    }	    
 	    Pair(){}	    
 	    @Override
