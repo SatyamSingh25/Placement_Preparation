@@ -1,0 +1,7 @@
+charles=3918
+alice=0
+bob=100
+charles=3918
+django=77
+alice=0
+erik=0 
