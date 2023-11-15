@@ -3,18 +3,20 @@ package binary_Tree;
 public class Symmetric_BinaryTree {
 	
 	//approach is similar as two binary tree is identical or not
-	public static boolean isSymmetricHelper(Node rightTree, Node leftTree) {
-		if(rightTree == null && leftTree == null) {
+	public boolean isSymmetric(TreeNode root) {
+		if(root == null || (root.left == null && root.right == null))
 			return true;
-		}
-		
-		return (rightTree != null && leftTree != null)&&
-				(isSymmetricHelper(rightTree.left, leftTree.right))&&
-				(isSymmetricHelper(rightTree.right, leftTree.left));
-				
+			
+		return check(root.left, root.right);
 	}
 	
-	public static boolean isSymmetric(Node root) {
-		return isSymmetricHelper(root.left, root.right);
+	public boolean check(TreeNode left, TreeNode right) {
+		if(left == null && right == null)
+			return true;
+		
+		if((left != null && right != null)&&(left.val == right.val)) 
+			return check(left.left, right.right) && check(left.right, right.left);
+		
+		return false;
 	}
 }
