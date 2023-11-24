@@ -1,4 +1,7 @@
 package dynamic_Programming;
+
+import java.util.Arrays;
+
 /** Counting palindromic substring
  * @Contributed_By Satyam Singh
  * ------------------------------------LEETCODE 647------------------------------------
@@ -24,10 +27,11 @@ public class CountSubstrings {
 	public int countSubstrings(String s) {
         boolean[][] dp = new boolean[s.length()][s.length()];
         int count=0;
-        for(int g=0; g<s.length(); g++)
+        for(int g=0; g<s.length(); g++) {
             for(int i=0,j=g; j<dp.length; i++, j++){
                 if(g == 0){
                     dp[i][j] = true;
+                    
                 }
                 else if(g==1){
                     if(s.charAt(i) == s.charAt(j)){
@@ -49,6 +53,19 @@ public class CountSubstrings {
                     count++;
                 }
             }
+        }
         return count;
     }
+	
+	public void printMat(boolean[][] dp) {
+		for(boolean[] arr: dp) {
+			System.out.println(Arrays.toString(arr));
+		}
+		System.out.println();
+	}
+	
+	public static void main(String[] args) {
+		CountSubstrings obj = new CountSubstrings();
+		System.out.println(obj.countSubstrings("aaa")); //6
+	}
 }
