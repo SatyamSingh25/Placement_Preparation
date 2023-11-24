@@ -11,11 +11,11 @@ import java.util.*;
 public class SubarrayWithSum {
 	
 	public static ArrayList<Integer> subarrayWithSum(int[] arr, int sum) {
-		int currentSum = arr[0];
+		int currentSum = 0;
 		int start = 0;
 		ArrayList<Integer> res = new ArrayList<>();
 		
-		for(int i=1; i<=arr.length; i++) {
+		for(int i=0; i<=arr.length; i++) {
 			
 			while(currentSum > sum &&  start < i-1) {
 				currentSum -= arr[start];
