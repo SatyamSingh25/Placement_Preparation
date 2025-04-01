@@ -30,6 +30,26 @@ public class SearchIn_rowwise_or_columwise_sorted_matrix {
 		return false;//if element is not found
 	}
 	
+	//Time complexity = O(log(n+m))
+	//Space = O(1)
+	public static boolean SearchInSortedMatrix(int[][] arr, int target) {
+		int rows = arr.length;
+		int columns = arr[0].length;
+		
+		int low = 0, high = (rows * columns)-1;
+		
+		while(low <= high) {
+			int mid = (low + high)/2;
+			int row = mid / columns;
+			int col = mid % columns;
+			
+			if(arr[row][col] == target) return true;
+			else if(arr[row][col] < target) low = mid + 1;
+			else high = mid -1;
+		}
+		return false;
+	}
+	
 	//Driver Code
 	public static void main(String[] args) {
 		int[][] mat = new int[][]	{{3, 30, 38},
@@ -46,6 +66,9 @@ public class SearchIn_rowwise_or_columwise_sorted_matrix {
 
         //function call
         System.out.println(searchElement2 + " is present: " + search(mat, searchElement2)); //TRUE
+        
+        System.out.println(searchElement2 + " is present: " + SearchInSortedMatrix(mat, searchElement2)); //true
+        System.out.println(searchElement2 + " is present: " + SearchInSortedMatrix(mat, searchElement)); //false
         
 	}
 }
