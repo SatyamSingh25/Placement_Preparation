@@ -7,6 +7,7 @@ public class CountSubarrays_with_GCD_K {
 		return gcd(b, a%b);
 	}
 	
+	//approach 1
 	public static int countSubArrays_With_GCD_K(int[] arr, int k) {
 		int count = 0;
 		
@@ -27,10 +28,31 @@ public class CountSubarrays_with_GCD_K {
 		
 		return count;
 	}
+	
+	
+	//approach 2
+	public static int countSubarrays_With_GCD_equal_to_k(int[] arr, int k) {
+		int count = 0;
+		
+		for(int i=0; i<arr.length; i++) {
+			int currGCD = 0;
+		
+			for(int j=i; j<arr.length; j++) {
+				currGCD = gcd(currGCD, arr[j]);
+				
+				if(currGCD < k) break;
+				
+				if(currGCD == k) count++;
+			}
+		}
+		return count;
+				
+	}
 
 	public static void main(String[] args) {
 		int[] arr = new int[]{9,3,1,2,6,3};
 		System.out.println(countSubArrays_With_GCD_K(arr, 3)); //result 4
+		System.out.println(countSubarrays_With_GCD_equal_to_k(arr, 3)); //result 4
 	}
 
 }
