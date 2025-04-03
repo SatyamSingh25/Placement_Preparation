@@ -39,12 +39,10 @@ public class Longest_Substring_With_Unique_Characters {
 			else { //it not in set
 				set.add(str.charAt(j));
 				j++;
-				max = Math.max(max, set.size());
+				max = Math.max(max, set.size()); //number of character present in SET is the answer
 			}	
 		}
         return max;
-//		System.out.println(max);
-		
 	}
 
 }
