@@ -20,6 +20,7 @@ package array;
  */
 import java.util.*;
 public class _3Sum {
+	
 	// TC : O(nLog(n)) + O(n^2)
 	// SC :  O(no. of quadruplets) = O(1)
 	public static List<List<Integer>> printAllTripetSumSubsequence(int[] arr){
@@ -33,7 +34,6 @@ public class _3Sum {
 			int k = arr.length-1;
 			
 			while(j < k) {
-				
 				int sum = arr[j] + arr[k];
 				
 				if(sum == -arr[i]) {
