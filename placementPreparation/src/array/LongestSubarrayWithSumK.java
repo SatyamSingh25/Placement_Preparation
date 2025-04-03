@@ -20,8 +20,10 @@ package array;
 import java.util.*;
 public final class LongestSubarrayWithSumK {
 	
-	//TC : O(n)
-	//SC : O(n)
+
+	// Optimal if Array has +ve and -ve both this is the best solution
+	// TC : O(n)
+	// SC : O(n)
 	public static int longestSubarryWithSumK(int[] arr, int target) {
 		HashMap<Long, Integer> map = new HashMap<>(); //sum -> till current index
 		
@@ -45,10 +47,37 @@ public final class LongestSubarrayWithSumK {
 		}
 		return max;
 	}
+	
+	// Optimal if Array contain only +ve numbers
+	// TC : O(n)
+	// SC : O(1)
+	public static int LongestSubarrayWithSumZero_only_positive_Number(int[] arr, int target) {
+		int start = 0;
+		int end = 0;
+		int sum = arr[0];
+		int max = 0;
+		
+		while(end < arr.length) {
+			
+			if(start <= end && sum > target) {
+				sum -= arr[start];
+				start++;
+			}
+			
+			if(sum == target)
+				max = Math.max(max, end - start + 1);
+			
+			end++;
+			if(end < arr.length)
+				sum = sum + arr[end];
+		}
+		return max;
+	}
 
 	//Driver Code
 	public static void main(String[] args) {
 		System.out.println(longestSubarryWithSumK(new int[] {1, 2, 3, 1, 1, 1, 1}, 3));// result 3
+		System.out.println(LongestSubarrayWithSumZero_only_positive_Number(new int[] {1, 2, 3, 1, 1, 1, 1}, 3));// result 3
 	}
 
 }
