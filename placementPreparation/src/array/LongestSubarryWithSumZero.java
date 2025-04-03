@@ -23,6 +23,7 @@ package array;
 import java.util.*;
 public class LongestSubarryWithSumZero {
 
+	// if Array has +ve and -ve both this is the best solution
 	// TC : O(n)
 	// SC : O(n)
 	public static int LongestSubarrayWithSumZero(int[] arr) {
