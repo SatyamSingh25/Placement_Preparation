@@ -20,7 +20,8 @@ package array;
  */
 import java.util.*;
 public class _3Sum {
-	
+	// TC : O(nLog(n)) + O(n^2)
+	// SC :  O(no. of quadruplets) = O(1)
 	public static List<List<Integer>> printAllTripetSumSubsequence(int[] arr){
 		
 		Set<List<Integer>> ans = new HashSet<>(); // because no duplicate is required
