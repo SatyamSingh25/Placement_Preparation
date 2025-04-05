@@ -1,6 +1,6 @@
 package backtrack_or_recursion;
 /**
- * @CombinationSum_1
+ * @CombinationSum_Print_all_combination_equal_to_Target
  * @StriverSheet : https://takeuforward.org/data-structure/combination-sum-1/
  * @Leetcode_39
  * 
