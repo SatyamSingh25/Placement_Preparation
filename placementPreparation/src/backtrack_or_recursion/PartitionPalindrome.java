@@ -7,32 +7,40 @@ package backtrack_or_recursion;
 	Example 1:
 	Input: s = "aab"
 	Output: [["a","a","b"],["aa","b"]]
+   --------------------------------------------------------------------------------------------------------------------------------------------
  */
 import java.util.*;
 public class PartitionPalindrome {
 	
+	//Recursive approach
 	public static List<List<String>> partition(String str) {
 		List<List<String>> result = new ArrayList<>();
-		List<String> path = new ArrayList<>();
 		
-		partitionHelper(0, str, path, result);
+		solve(0, str, new ArrayList<>(), result);
+		
 		return result;
 	}
-	public static void partitionHelper(int start, String str, List<String> path, List<List<String>> result) {
-		if(start == str.length()) {
+	
+	public static void solve(int start, String str, List<String> path, List<List<String>> result) {
+		if(start == str.length()) { // reach till end & got all palindrome substrings till now.
 			result.add(new ArrayList<>(path));
 			return;
 		}
 		
 		for(int i=start; i<str.length(); i++) {
-			if(isPalindrome(str, start, i)) {
-				path.add(str.substring(start, i+1));
-				partitionHelper(i+1, str, path, result);
-				path.remove(path.size()-1);
+			if(isPalindrome(str.substring(start,  i+1))) { //checking current substring was palindrome or NOT
+				
+				path.add(str.substring(start, i+1)); //considering current substring into answer
+				
+				solve(i+1, str, path, result);
+				
+				path.remove(path.size()-1); //removing as part of backtracking
 			}
 		}
 	}
-	public static boolean isPalindrome(String str, int start, int end) {
+	
+	public static boolean isPalindrome(String str) {
+		int start = 0, end = str.length()-1;
 		while(start <= end) {
 			if(str.charAt(start++) != str.charAt(end--))
 				return false;
@@ -40,12 +48,9 @@ public class PartitionPalindrome {
 		return true;
 	}
 
+	//Dirver code
 	public static void main(String[] args) {
-		String str = "aabb";
-		List<List<String>> result = partition(str);
-		for(List<String> res: result)
-			System.out.println(res);
-		
+		System.out.print(partition("aabb")); //[["a","a","b","b"],["a","a","bb"],["aa","b","b"],["aa","bb"]]		
 	}
 
 }
