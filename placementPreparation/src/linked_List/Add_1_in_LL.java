@@ -4,7 +4,7 @@ package linked_List;
  */
 public class Add_1_in_LL {
 	
-	class Node{
+	static class Node{
 		int data ;
 		Node next;
 		public Node(int d) {
