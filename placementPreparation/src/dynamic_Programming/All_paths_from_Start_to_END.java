@@ -45,15 +45,23 @@ public class All_paths_from_Start_to_END {
 			System.out.println();
 		}
 		//result on dp[n-1][m-1]
-		System.out.println("Total number of path ussingh DYNAMIC PROGRAMMING: "+dp[dp.length-1][dp[0].length]+ "\n");
+		System.out.println("Total number of path ussingh DYNAMIC PROGRAMMING: "+dp[dp.length-1][dp[0].length-1]+ "\n");
 	}
 	//main Method
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int[][] dp = new int[sc.nextInt()][sc.nextInt()];
 		
+		/*
+		 * 3
+		 * 3
+		 * 1 1 1 
+		 * 1 2 3 
+		 * 1 3 6 
+		 * Total number of path ussingh DYNAMIC PROGRAMMING: 6
+		 */
 		DynamicApproach(dp);
-		recursiveAppraoch(dp);
+		recursiveAppraoch(dp); // 6
 		sc.close();
 	}
 }
