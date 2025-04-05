@@ -115,14 +115,14 @@ public class Reverse_K_group_in_LL {
 	
 	//Approach
 	public static Node ReverseKGroup2(Node head, int k) {
-		Node dummy = new Node(0, head);
-		Node pointer = dummy;
+		Node temp = new Node(-1, head);
+		Node pointer = temp;
 		
 		while(pointer != null) {
 			Node tracker = pointer;
 			
 			for(int i=0; i<k; i++) {
-				if(tracker.next == null) return dummy.next;
+				if(tracker.next == null) return temp.next;
 				
 				tracker = tracker.next;
 			}
@@ -141,7 +141,7 @@ public class Reverse_K_group_in_LL {
 				pointer = lastNodeWhichGotReversed;
 			}
 		}
-		return dummy.next;
+		return temp.next;
 	}
 	
 	//Driver Code
