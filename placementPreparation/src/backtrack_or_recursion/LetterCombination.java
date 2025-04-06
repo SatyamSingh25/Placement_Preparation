@@ -20,24 +20,25 @@ public class LetterCombination {
 	private static int count = 0;
 	
 	public static List<String> letterCombinations(String digits){
-		
 		if(digits.length() == 0) return combinations;
 		
 		String[] alphas = {"0", "0", "abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"};
-		solve(digits, alphas, 0,  "");
+		
+		solve(0, "", digits, alphas);
+		
 		return combinations;
 	}
 	
-	public static void solve(String digits, String[] alphas, int currIndex, String str){
+	public static void solve(int start, String currString, String digits, String[] alphas){
 		
-		if(currIndex == digits.length()) {
-			combinations.add(str);
+		if(start == digits.length()) {
+			combinations.add(currString);
 			return;
 		}
 		
-		String possibleAplhas = alphas[digits.charAt(currIndex) - '0'];
+		String possibleAplhas = alphas[digits.charAt(start) - '0'];
 		for(char ch: possibleAplhas.toCharArray()) {
-			solve(digits, alphas, currIndex + 1, str + ch);
+			solve(start + 1, currString + ch, digits, alphas);
 		}
 	}
 	
