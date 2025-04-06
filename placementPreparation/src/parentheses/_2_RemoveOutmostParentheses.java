@@ -2,7 +2,7 @@ package parentheses;
 /**
  * -------------------------------------------Remove Outmost Parentheses------------------------------------
  */
-public class RemoveOutmostParentheses {
+public class _2_RemoveOutmostParentheses {
 	
 	//Approach
 	public static String removeOutmostParentheses(String s){
