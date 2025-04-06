@@ -1,7 +1,7 @@
 package parentheses;
 
 import  java.util.*;
-public class MinimumAddToMakeValidParentheses {
+public class _3_MinimumAddToMakeValidParentheses {
 	
 	//Stack Approach
 	// TC: O(n)
