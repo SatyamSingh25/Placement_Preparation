@@ -59,9 +59,8 @@ public class BinaryTree_Level_Order_Traversal_II {
                 if(node.right != null)
                     queue.add(node.right);
             }
-            arr.add(innerList);
+            arr.add(0, innerList); // adding in front avoiding reverse as using LL data structur to store data, this isO(1) opr
         }
-        Collections.reverse(arr);
         return arr;
     }
 }
