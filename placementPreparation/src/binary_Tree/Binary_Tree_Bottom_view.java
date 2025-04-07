@@ -13,8 +13,8 @@ public class Binary_Tree_Bottom_view {
 	}
 	
 	 public ArrayList <Integer> bottomView(Node root){
-	        //      line    ,node
-	        TreeMap<Integer, Node> sortedMap = new TreeMap<>();
+	        //      line    ,Value
+	        TreeMap<Integer, Integer> sortedMap = new TreeMap<>();
 	        Queue<Pair> queue = new LinkedList<>();
 	        
 	        queue.offer(new Pair(root, 0));
@@ -24,7 +24,7 @@ public class Binary_Tree_Bottom_view {
 	            Node currNode = temp.node;
 	            int line = temp.line;
 	            
-	            sortedMap.put(line, currNode);
+	            sortedMap.put(line, currNode.data);
 	            
 	            if(currNode.left != null){
 	                queue.offer(new Pair(currNode.left, line-1));
@@ -34,12 +34,8 @@ public class Binary_Tree_Bottom_view {
 	            }
 	        }
 	        
-	        Collection<Node> result = sortedMap.values();
-	        ArrayList<Integer> arr = new ArrayList<>();
+	        ArrayList<Integer> arr = new ArrayList<>(sortedMap.values());
 	        
-	        for(Node i: result){
-	            arr.add(i.data);
-	        }
 	        return arr;
 	    }
 
