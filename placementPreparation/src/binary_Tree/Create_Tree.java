@@ -16,7 +16,7 @@ class Node{
 	Node(int d, Node left, Node right){
 		this.data = d;
 		this.left = left;
-		this.right = left;
+		this.right = right;
 	}
 }
 public class Create_Tree {
