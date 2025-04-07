@@ -27,5 +27,17 @@ public class AllElementsInTwoBinarySearchTrees {
         Collections.sort(arr);
         return arr;
     }
+    
+    //we can do this using morris traversal to avoid using recursion stack
+    //Apprach
+    /*
+     * l1 = morrisInOrderTraversal(root1);
+     * l2 = morrisInOrderTraversak(root2);
+     * 
+     * noe w=question came to merge two sorted arrays [merge sort];
+     * 
+     * DONE
+     */
+    
 
 }
