@@ -53,4 +53,33 @@ public class All_Paths_from_Root_to_leaf {
 			searchingPaths(root.right, path + root.data + "->", result);
 		}
 	}
+	
+	
+	//GFG approach
+	// link : https://www.geeksforgeeks.org/problems/root-to-leaf-paths/1
+    public static ArrayList<ArrayList<Integer>> Paths(Node root) {
+        ArrayList<ArrayList<Integer>> arr = new ArrayList<>();
+        
+        if(root != null)
+            solve(root, new ArrayList<Integer>(), arr);
+        
+        return arr;
+    }
+    
+    public static void solve(Node root, ArrayList<Integer> innerList, ArrayList<ArrayList<Integer>> arr){
+        innerList.add(root.data);
+        
+        if (root.left == null && root.right == null) {
+            arr.add(new ArrayList<>(innerList)); 
+        } 
+        else {
+            if (root.left != null)
+                solve(root.left, innerList, arr);
+
+            if (root.right != null)
+                solve(root.right, innerList, arr);
+        }
+            
+        innerList.remove(innerList.size()-1);
+    }
 }
