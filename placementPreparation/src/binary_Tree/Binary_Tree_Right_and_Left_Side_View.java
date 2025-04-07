@@ -40,6 +40,7 @@ public class Binary_Tree_Right_and_Left_Side_View {
             for(int i=0; i<size; i++){
                 Node node = queue.poll();
                 
+                //adding last node data in result array as its right most element in that level
                 if(i==size-1)
                     arr.add(node.data);
                 
@@ -73,6 +74,7 @@ public class Binary_Tree_Right_and_Left_Side_View {
             for(int i=0; i<size; i++){
                 Node node = queue.poll();
                 
+                //adding first node from the current queue to result as this the left most node in current level
                 if(i==0)
                     arr.add(node.data);
                 
