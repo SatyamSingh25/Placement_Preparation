@@ -28,21 +28,12 @@ public class GroupAllAnagrams {
 			map.get(s).add(str);
 		}
 		
-		ArrayList<ArrayList<String>> result = new ArrayList<>();
-		for(ArrayList<String> itr: map.values()) {
-			result.add(itr);
-		}
-		return result;
+		return new ArrayList<>(map.values());
 	}
 
 	//driver code
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		String[] words = new String[n];
-		for(int i=0; i<n; i ++) {
-			words[i] = sc.next();
-		}
+		String[] words = new String[] {"eat","tea","tan","ate","nat","bat"};
 		
 		System.out.println(groupAnagrams(words));
 	}
