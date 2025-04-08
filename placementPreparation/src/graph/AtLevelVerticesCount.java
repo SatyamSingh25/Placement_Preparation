@@ -1,7 +1,9 @@
 package graph;
-
+/**
+ * Problem : Given an undirected/unweighted graph, a source node, and a level L, 
+ *           find the number of nodes that are exactly at level L from the source node
+ */
 import java.util.*;
-
 public class AtLevelVerticesCount {
 	public static void addEdge(ArrayList<ArrayList<Integer>> arr, int i, int j) {
 		arr.get(i).add(j);
@@ -17,7 +19,7 @@ public class AtLevelVerticesCount {
 		
 		visited[0] = true;
 		
-		while(queue.isEmpty() != true) {
+		while(!queue.isEmpty()) {
 			int curr = queue.poll();
 			Iterator<Integer> itr = arr.get(curr).listIterator();
 			
