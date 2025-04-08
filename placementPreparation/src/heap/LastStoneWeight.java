@@ -7,7 +7,7 @@ import java.util.*;
  */
 public class LastStoneWeight {
 	public int lastStoneWeight(int[] stones) {
-        PriorityQueue<Integer> pQueue = new PriorityQueue<Integer>(Collections.reverseOrder());
+        PriorityQueue<Integer> pQueue = new PriorityQueue<Integer>(Collections.reverseOrder());//max heap
         for(int i=0; i<stones.length; i++){
             pQueue.add(stones[i]);
         }
