@@ -16,6 +16,10 @@ public class TheSkylineProblem {
         }
 
         Collections.sort(arr);
+        for(Pair i: arr)
+        	System.out.print("["+i.x+","+i.height+"],");
+        System.out.println("\n");
+        
 
         PriorityQueue<Integer> pq = new PriorityQueue<>((a,b)->b-a);
         pq.add(0);
@@ -34,6 +38,7 @@ public class TheSkylineProblem {
                 pq.remove(height);
             }
 
+            System.out.println("curr Queue: "+ pq);
             if(currMaxHeight != pq.peek()){
                 List<Integer> innerList = new ArrayList<>();
                 innerList.add(start);
@@ -73,7 +78,7 @@ public class TheSkylineProblem {
 		
 		List<List<Integer>> result = getSkyline(buildings);
 		for(List<Integer> res: result)
-			System.out.println(res);
+			System.out.print(res);
 	}
 
 }
