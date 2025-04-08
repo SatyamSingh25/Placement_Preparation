@@ -23,7 +23,7 @@ public class BFS {
 		visited[source] = true;
 		queue.add(source);
 		
-		while(queue.isEmpty()==false){
+		while(!queue.isEmpty()){
 			source = queue.poll();
 			System.out.print(source+ " ");
 			
