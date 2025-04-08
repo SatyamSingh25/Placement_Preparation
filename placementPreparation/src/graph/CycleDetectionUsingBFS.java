@@ -2,14 +2,17 @@ package graph;
 //cycle detection in graph using BFS
 import java.util.*;
 public class CycleDetectionUsingBFS {
-	//pair for queue
-	public static class Pair{
-		int child, parent;
-		Pair(){};
-		Pair(int c, int p){
-			this.child = c;
-			this.parent = p;
+	//cycle detection using BFS in Bidirectional graph
+	public static boolean cycleDetectionUsingBFS(ArrayList<ArrayList<Integer>> graph) {
+		boolean visited[] = new boolean[graph.size()];
+		for(int i=0; i<graph.size(); i++) {
+			if(visited[i] == false) {
+				if(cycleDetectAt(i, graph, visited) == true) {
+					return true;
+				}
+			}
 		}
+		return false;
 	}
 	//cycle detection method helper or we can say that main BFS traversal for Cycle detection
 	public static boolean cycleDetectAt(int source, ArrayList<ArrayList<Integer>> graph, boolean[] visited){
@@ -34,18 +37,7 @@ public class CycleDetectionUsingBFS {
 		}
 		return false; 
 	}
-	//cycle detection using BFS in Bidirectional graph
-	public static boolean cycleDetectionUsingBFS(ArrayList<ArrayList<Integer>> graph) {
-		boolean visited[] = new boolean[graph.size()];
-		for(int i=0; i<graph.size(); i++) {
-			if(visited[i] == false) {
-				if(cycleDetectAt(i, graph, visited) == true) {
-					return true;
-				}
-			}
-		}
-		return false;
-	}
+
 	//adding bidirectional graph 
 	public static void addEdge(ArrayList<ArrayList<Integer>> graph, int s, int d) {
 		graph.get(s).add(d);
@@ -68,5 +60,13 @@ public class CycleDetectionUsingBFS {
 		System.out.println("cycle detected: " + cycleDetectionUsingBFS(graph));
 		
 	}
-
+	//pair for queue
+	public static class Pair{
+		int child, parent;
+		Pair(){};
+		Pair(int c, int p){
+			this.child = c;
+			this.parent = p;
+		}
+	}
 }
