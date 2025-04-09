@@ -8,42 +8,46 @@ package linked_List;
  * Output: 3 -> 2 -> 1 -> 6 -> 5 -> 4 -> 7
  *
  * @Dry_Run:
- * Initial list: dummy → 1 → 2 → 3 → 4 → 5 → 6 → 7 → null
- *                ↑
+ * Initial list: dummy -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> 7 -> null
+ *                ^
+ *                |
  *              pointer
  *
  * --- First Iteration ---
- * tracker moves 3 times → lands at node 3
- * Reversing 1 → 2 → 3:
+ * tracker moves 3 times -> lands at node 3
+ * Reversing 1 -> 2 -> 3:
  *   Iteration 1: prev = 1, curr = 2
- *   Iteration 2: prev = 2 → 1, curr = 3
- *   Iteration 3: prev = 3 → 2 → 1, curr = 4
+ *   Iteration 2: prev = 2 -> 1, curr = 3
+ *   Iteration 3: prev = 3 -> 2 -> 1, curr = 4
  * After reverse:
  *   prev = 3, curr = 4
  * Reconnect:
- *   dummy → 3 → 2 → 1 → 4 → 5 → 6 → 7
- *                           ↑
- *                         pointer
+ *   dummy -> 3 -> 2 -> 1 -> 4 -> 5 -> 6 -> 7
+ *                                   ^
+ *                                   |
+ *                                 pointer
  *
  * --- Second Iteration ---
- * tracker moves 3 times → lands at node 6
- * Reversing 4 → 5 → 6:
+ * tracker moves 3 times -> lands at node 6
+ * Reversing 4 -> 5 -> 6:
  *   Iteration 1: prev = 4, curr = 5
- *   Iteration 2: prev = 5 → 4, curr = 6
- *   Iteration 3: prev = 6 → 5 → 4, curr = 7
+ *   Iteration 2: prev = 5 -> 4, curr = 6
+ *   Iteration 3: prev = 6 -> 5 -> 4, curr = 7
  * After reverse:
  *   prev = 6, curr = 7
  * Reconnect:
- *   dummy → 3 → 2 → 1 → 6 → 5 → 4 → 7
- *                                           ↑
+ *   dummy -> 3 -> 2 -> 1 -> 6 -> 5 -> 4 -> 7
+ *                                           ^
+ *                                           |
  *                                         pointer
  *
  * --- Third Iteration ---
- * tracker moves 3 times → only 1 node left (7)
- * Not enough nodes to reverse → exit loop
+ * tracker moves 3 times -> only 1 node left (7)
+ * Not enough nodes to reverse -> exit loop
  *
- * Final Output: 3 → 2 → 1 → 6 → 5 → 4 → 7
+ * Final Output: 3 -> 2 -> 1 -> 6 -> 5 -> 4 -> 7
  */
+
 
 public class Reverse_K_group_in_LL {
 	static class Node{
