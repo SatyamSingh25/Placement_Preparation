@@ -72,15 +72,9 @@ public class RottenOranges {
 		
 		int row = sc.nextInt();
 		int col = sc.nextInt();
-		int[][] grid = new int[row][col];
+		int[][] grid = new int[][] {{2,1,1},{1,1,0},{0,1,1}};
 		
-		for(int i=0; i<row; i++) {
-			for(int j=0; j<col; j++) {
-				grid[i][j] = sc.nextInt();
-			}
-		}
-		
-		System.out.println(rottenMinutes(grid));
+		System.out.println(rottenMinutes(grid)); //4
 	}
 
 }
