@@ -16,6 +16,8 @@ package array;
 import java.util.HashMap;
 public class LongestArray_with_same_count_of_0_and_1 {
 	//Method
+	// TC : O(n)
+	//TC : O(n)
 	public static int longestContiguousArray(int[] arr) {
 		
 		HashMap<Integer, Integer> map = new HashMap<>();
