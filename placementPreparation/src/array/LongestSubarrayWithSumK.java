@@ -19,11 +19,11 @@ package array;
  */
 import java.util.*;
 public final class LongestSubarrayWithSumK {
-	
 
 	// Optimal if Array has +ve and -ve both this is the best solution
 	// TC : O(n)
 	// SC : O(n)
+	static int count  =0;
 	public static int longestSubarryWithSumK(int[] arr, int target) {
 		HashMap<Long, Integer> map = new HashMap<>(); //sum -> till current index
 		
@@ -34,12 +34,14 @@ public final class LongestSubarrayWithSumK {
 			sum = sum + arr[i];
 			
 			if(sum == target) {
-				max = Math.max(max, i + 1); //currSum = target that means ki yaha tak saara poora subarray ban gya 0 to i tak
+				max = Math.max(max, i + 1);
+				count++;//currSum = target that means ki yaha tak saara poora subarray ban gya 0 to i tak
 			}
 			
 			long remaining = sum - target;
 			if(map.containsKey(remaining)) {
 				max = Math.max(max, i - map.get(remaining)); //found a prev index from where we can find our curr subarray whose sum is target
+				count++;
 			}
 			
 			if(!map.containsKey(sum))
@@ -78,6 +80,7 @@ public final class LongestSubarrayWithSumK {
 	public static void main(String[] args) {
 		System.out.println(longestSubarryWithSumK(new int[] {1, 2, 3, 1, 1, 1, 1}, 3));// result 3
 		System.out.println(LongestSubarrayWithSumZero_only_positive_Number(new int[] {1, 2, 3, 1, 1, 1, 1}, 3));// result 3
+		System.out.println(count);
 	}
 
 }
