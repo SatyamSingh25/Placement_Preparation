@@ -25,7 +25,6 @@ public class MaxArea_Rectangle_in_0_1_matrix {
 		
 		for(int i=0; i<row; i++) {
 			for(int j=0; j<col; j++) {
-//				if(i!=0 || arr[i][j] != 0) {
 				if(i!=0) {
 					if(arr[i][j] !=0) {
 						arr[i][j] += arr[i-1][j];
