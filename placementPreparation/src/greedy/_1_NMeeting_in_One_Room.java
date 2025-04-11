@@ -1,5 +1,10 @@
 package greedy;
-
+/**
+ * @StriverSheet
+ * @NMeeting_IN_Single_room
+ * @Greedy
+ * @Sort_As_End_Time_of_interval
+ */
 import java.util.*;
 public class _1_NMeeting_in_One_Room {
 	static class Meeting{
