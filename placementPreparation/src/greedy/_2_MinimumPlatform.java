@@ -4,6 +4,7 @@ package greedy;
  * @MinimumPlatform 
  * @Greedy
  * @Sorting_arrival_and_end_time
+ * link : https://www.geeksforgeeks.org/problems/minimum-platforms-1587115620/1
  * Problem : You are given the arrival times arr[] and departure times dep[] of all trains 
  *           that arrive at a railway station on the same day. 
  *           Your task is to determine the minimum number of platforms required at the station to ensure that no train is kept waiting.
