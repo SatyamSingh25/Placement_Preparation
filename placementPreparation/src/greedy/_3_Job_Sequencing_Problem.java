@@ -26,6 +26,9 @@ public class _3_Job_Sequencing_Problem {
 		}
 	}
 	
+	//Approach
+	//TC : O(nlog(n)) + (n * m)
+	//TC : O(n)
 	public static int[] jobSequenceForMaxProfit(Task[] tasks) {
 		Arrays.sort(tasks, (a, b) -> b.profit - a.profit); //greedy
 		int[] jobSequence = new int[tasks.length];
@@ -51,6 +54,7 @@ public class _3_Job_Sequencing_Problem {
 		return jobSequence;		
 	}
 
+	//Driver code
 	public static void main(String[] args) {
 		Task task1 = new Task(1,4,20);
 		Task task2 = new Task(2,1,10);
