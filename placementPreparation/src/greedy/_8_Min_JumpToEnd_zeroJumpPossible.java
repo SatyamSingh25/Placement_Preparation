@@ -1,4 +1,4 @@
-package dynamic_Programming;
+package greedy;
 
 /**
  * Link : https://www.geeksforgeeks.org/minimum-number-of-jumps-to-reach-end-of-a-given-array/
@@ -12,7 +12,7 @@ package dynamic_Programming;
  * 
  */
 import java.util.*;
-public class Min_JumpToEnd_zeroJumpPossible {
+public class _8_Min_JumpToEnd_zeroJumpPossible {
 	
 	public static int minimumJumpsToReachEnd(int[] arr) {
 		if(arr.length <= 0) return -1;
