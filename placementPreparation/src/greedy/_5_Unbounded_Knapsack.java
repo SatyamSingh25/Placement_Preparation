@@ -53,6 +53,7 @@ public class _5_Unbounded_Knapsack {
 		
 		return dp[end][capacity] = Math.max(take, notTake);
 	}
+	
 	//Tabulation
 	public static int unboundedKnapsack_Tabulation(int[] weight, int[] value, int capacity) {
 		int n = weight.length;
