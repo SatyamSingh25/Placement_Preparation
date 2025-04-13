@@ -3,7 +3,7 @@ package graph;
  * @Leetcode_1162
  * @Fathest_0_from_1
  * @BFS
- * Problem: Given an n x n grid containing only values 0 and 1, 
+ * Problem: Given an {n x n} grid containing only values 0 and 1, 
  *          where 0 represents water and 1 represents land,
  *          find a water cell such that its distance to the nearest land cell is maximized, and return the distance. 
  *          If no land or water exists in the grid, return -1.
@@ -20,24 +20,7 @@ package graph;
  * The cell (1, 1) is as far as possible from all the land with distance 2. * 
  */
 import java.util.*;
-public class Far_from_Land_as_Possible {
-
-	//Main method
-    public static void main(String[] args){
-        int[][] grid = new int[][]{{1,0,1},
-        							{0,0,0},
-        							{1,0,1}};
-        //result -> 2
-        System.out.println(maxDistance(grid));
-        
-
-        int[][] grid2 = new int[][]{{1,0,0},
-									{0,0,0},
-									{0,0,0}};
-        //reuslt -> 4
-        System.out.println(maxDistance(grid2));
-    }
-    
+public class Far_from_Land_as_Possible {    
     	
     public static int maxDistance(int[][] grid){
         int row = grid.length;
@@ -89,6 +72,22 @@ public class Far_from_Land_as_Possible {
             return false;
 
         return grid[i][j] == 0;
+    }
+    
+  //Main method
+    public static void main(String[] args){
+        int[][] grid = new int[][]{{1,0,1},
+        							{0,0,0},
+        							{1,0,1}};
+        //result -> 2
+        System.out.println(maxDistance(grid));
+        
+
+        int[][] grid2 = new int[][]{{1,0,0},
+									{0,0,0},
+									{0,0,0}};
+        //reuslt -> 4
+        System.out.println(maxDistance(grid2));
     }
 
 }
