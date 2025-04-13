@@ -2,6 +2,12 @@ package graph;
 /**
  * Problem : Given an undirected/unweighted graph, a source node, and a level L, 
  *           find the number of nodes that are exactly at level L from the source node
+ *           
+ *      0   Source : 0
+       / \
+      1   2
+     /   / \
+    3   4   5
  */
 import java.util.*;
 public class AtLevelVerticesCount {
@@ -12,12 +18,12 @@ public class AtLevelVerticesCount {
 	public static int atLevelVerticesCount(ArrayList<ArrayList<Integer>> arr, int level, int source) {
 		//using BFS
 		boolean[] visited = new boolean[arr.size()];
-		LinkedList<Integer> queue = new LinkedList<Integer>();
+		Queue<Integer> queue = new LinkedList<Integer>();
 		int[] levelCount = new int[arr.size()];
 		
-		queue.offer(0);
+		queue.offer(source);
 		
-		visited[0] = true;
+		visited[source] = true;
 		
 		while(!queue.isEmpty()) {
 			int curr = queue.poll();
@@ -67,6 +73,7 @@ Input----
 2 4
 2 5
 2
+0
 Output----
 3
 */
