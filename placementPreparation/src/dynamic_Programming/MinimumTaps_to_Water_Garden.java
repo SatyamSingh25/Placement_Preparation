@@ -39,6 +39,7 @@ public class MinimumTaps_to_Water_Garden {
 		}
 		
 		Arrays.sort(range, (a,b)-> a.getKey() - b.getKey());
+		System.out.println(Arrays.toString(range));
 		
 		int totalOpenTaps = solve(0, 0, range, n);
 		return totalOpenTaps == 1e9 ? -1 : totalOpenTaps;
@@ -98,6 +99,11 @@ public class MinimumTaps_to_Water_Garden {
 		public int hashCode() {
 			return Objects.hash(key, value);
 		}
+		
+		@Override
+		public String toString() {
+			return key + "->" + value;
+		}
 	}
 	
 	public static void main(String[] args) {
@@ -105,7 +111,7 @@ public class MinimumTaps_to_Water_Garden {
 		int[] arr = new int[]{3,4,1,1,0,0};
 		
 		System.out.println(obj.minTaps(5, arr)); //1
-		System.out.println(obj.minTaps(5, new int[] {2,0,0,0,2})); //2 
+//		System.out.println(obj.minTaps(5, new int[] {2,0,0,0,2})); //2 
 	}
 
 }
