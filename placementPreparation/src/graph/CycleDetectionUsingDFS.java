@@ -50,7 +50,7 @@ public class CycleDetectionUsingDFS {
 					return true;
 				}
 			}
-			else if(i == parent) {
+			else if(i != parent) {
 				return true;
 			}
 		}
