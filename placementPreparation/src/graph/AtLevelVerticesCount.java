@@ -11,10 +11,6 @@ package graph;
  */
 import java.util.*;
 public class AtLevelVerticesCount {
-	public static void addEdge(ArrayList<ArrayList<Integer>> arr, int i, int j) {
-		arr.get(i).add(j);
-		arr.get(j).add(i);
-	}
 	public static int atLevelVerticesCount(ArrayList<ArrayList<Integer>> arr, int level, int source) {
 		//using BFS
 		boolean[] visited = new boolean[arr.size()];
@@ -27,10 +23,8 @@ public class AtLevelVerticesCount {
 		
 		while(!queue.isEmpty()) {
 			int curr = queue.poll();
-			Iterator<Integer> itr = arr.get(curr).listIterator();
 			
-			while(itr.hasNext()) {
-				int now = itr.next();
+			for(int now: arr.get(curr)) {
 				
 				if(visited[now] == false) {
 					visited[now] = true;
@@ -39,13 +33,21 @@ public class AtLevelVerticesCount {
 				}
 			}
 		}
+		
 		int count = 0;
 		for(int i=0; i<arr.size(); i++) {
 			if(levelCount[i] == level) {
 				count++;
 			}
 		}
+		System.out.println(Arrays.toString(levelCount));
 		return count;
+	}
+	
+	//Bidirectional edge
+	public static void addEdge(ArrayList<ArrayList<Integer>> arr, int i, int j) {
+		arr.get(i).add(j);
+		arr.get(j).add(i);
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
