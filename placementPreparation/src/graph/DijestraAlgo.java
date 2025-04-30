@@ -8,7 +8,13 @@ public class DijestraAlgo {
 	//BFS using in Dijkstra's algorithm
 	public static void DijkstraAlgo(int source,int vertices, ArrayList<ArrayList<Pair>> graph) {
 		int dist[] = new int[vertices];
-		PriorityQueue<Pair> queue = new PriorityQueue<Pair>(vertices, new Pair());
+		
+		PriorityQueue<Pair> queue = new PriorityQueue<Pair>(vertices, (a,b) -> {
+			if(a.weight <= b.weight)
+				return Integer.compare(a.weight, b.weight);
+			else
+				return Integer.compare(a.node, b.node);
+		});
 		
 		Arrays.fill(dist, Integer.MAX_VALUE); //setting all dist as Infinite because we haven't get anyone them till now
 		
@@ -106,8 +112,8 @@ public class DijestraAlgo {
     }
 	static class Pair implements Comparator<Pair>
 	{
-	    int node;
-	    int weight;
+	    static int node;
+	    static int weight;
 	    
 	    Pair(int v, int succProb) { 
 	    	node = v; 
