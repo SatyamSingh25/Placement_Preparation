@@ -2,6 +2,8 @@ package array;
 import java.util.*;
 public class RainTrappingWater {
 	
+	//TC : O(3N)
+	//Sc : O(2N)
 	public static int maxTrapWater(int[] buildings) {
 		int size = buildings.length;
 		int[] leftMax = new int[size];
@@ -24,6 +26,31 @@ public class RainTrappingWater {
 		
 		return unitOfWaterStored;
 	}
+	
+	//TC : O(n)
+	//SC : O(1)
+	public static int maxWaterTrap(int[] arr) {
+		int n = arr.length;
+		
+		int left = 1, right = n-1;
+		int leftMax = arr[0];
+		int rightMax = arr[n-1];
+		int res = 0;
+		
+		while(left<=right) {
+			if(leftMax >= rightMax) {
+				res = res + Math.max(0, rightMax - arr[right]);
+				rightMax = Math.max(rightMax, arr[right]);
+				right--;
+			}
+			else {
+				res = res +  Math.max(0, leftMax - arr[left]);
+				leftMax = Math.max(leftMax, arr[left]);
+				left++;
+			}
+		}
+		return res;
+	}
 
 	public static void main(String[] args) {
 		int[] buildings = new int[] {0,1,0,2,1,0,1,3,2,1,2,1};
@@ -31,6 +58,9 @@ public class RainTrappingWater {
 		
 		buildings = new int[] {4,2,0,3,2,5};
 		System.out.println(maxTrapWater(buildings)); //result = 9
+		
+		//O(1) space
+		System.out.println(maxWaterTrap(new int[] {2,1,5,3,1,0,4})); //result = 9
 	}
 
 }
